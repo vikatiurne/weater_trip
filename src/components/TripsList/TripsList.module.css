@@ -1,0 +1,12 @@
+.cards {
+  margin-right: 3rem;
+  margin-bottom: 2rem;
+  display: flex;
+}
+.tripContainer {
+  margin-right: 1.2rem;
+  cursor: pointer;
+}
+.activeCard {
+  border: 1px solid #1890ff;
+}

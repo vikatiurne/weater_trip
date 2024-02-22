@@ -1,0 +1,42 @@
+[
+  {
+    "cityName": "London",
+    "imgUrl": "../assets/london.jpg"
+  },
+  {
+    "cityName": "Kyiv",
+    "imgUrl": "../assets/kyiv.jpg"
+  },
+  {
+    "cityName": "Tokio",
+    "imgUrl": "../assets/tokio.jpg"
+  },
+  {
+    "cityName": "Stambul",
+    "imgUrl": "../assets/stambul.jpg"
+  },
+  {
+    "cityName": "Barselona",
+    "imgUrl": "../assets/barselona.jpg"
+  },
+  {
+    "cityName": "Praha",
+    "imgUrl": "../assets/praha.jpg"
+  },
+  {
+    "cityName": "Paris",
+    "imgUrl": "../assets/paris.jpg"
+  },
+  {
+    "cityName": "Kharkiv",
+    "imgUrl": "../assets/kharkiv.jpg"
+  },
+  {
+    "cityName": "Ottava",
+    "imgUrl": "../assets/ottava.jpg"
+  },
+  {
+    "cityName": "Athens",
+    "imgUrl": "../assets/athens.jpg"
+  }
+]

@@ -1,0 +1,28 @@
+.mainContainer {
+  width: 36.75rem;
+  height: 15rem;
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.window {
+  margin: 0 1rem 0 1rem;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.allPagesContainer {
+  height: 100%;
+  display: flex;
+  transition: translate;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.arrow {
+  margin-bottom: 6rem;
+  cursor: pointer;
+}

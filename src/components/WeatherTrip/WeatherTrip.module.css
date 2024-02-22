@@ -1,0 +1,31 @@
+.titleWeather {
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  font-weight: bold;
+  color: #0a3964;
+}
+.wheathrTripContainer {
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.wheathrTripContainer section {
+  text-align: center;
+}
+.dayOfWeek {
+  margin-bottom: 1.5rem;
+  color: gray;
+  font-size: 0.7rem;
+}
+.weatherIcon {
+  margin-bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+  background-repeat: no-repeat;
+}
+.weatherTemp {
+  font-weight: bold;
+  color: #0a3964;
+  font-size: 0.7rem;
+}

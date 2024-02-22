@@ -1,0 +1,22 @@
+.searchContainer {
+  margin: 0 0 3rem 2rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  max-width: max-content;
+  width: 100%;
+  background-color: #f2f4f8;
+  border-radius: 10px;
+  font-size: 1.8rem;
+}
+.search {
+  padding: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+}
+.search::placeholder {
+  color: black;
+  font-size: 1.5rem;
+}

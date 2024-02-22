@@ -1,0 +1,90 @@
+.addCard {
+  width: 10rem;
+  height: 10rem;
+  background-color: #f2f4f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.addCard p {
+  font-size: 1.7rem;
+}
+.container {
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.25);
+  color: black;
+}
+.modalHeader {
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dedfe0;
+}
+
+.modalHeader h2,
+.iconClose {
+  font-size: 1.2rem;
+}
+.iconClose {
+  color: gray;
+}
+
+.modalFields {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+}
+.field label span {
+  color: red;
+}
+.field label,
+.selectCity,
+.selectDate {
+  margin-bottom: 0.7rem;
+}
+.selectCity,
+.selectDate {
+  font-size: 1rem;
+  padding: 0.4rem;
+  color: gray;
+  outline: gray;
+}
+.invalidSelect{
+border:2px solid red;
+}
+.invalidInput{
+  border-color: red;
+  outline: red;
+}
+.invalid{
+color: gray;
+}
+.modalBtns {
+  text-align: right;
+}
+.cancel, .primary, .invalid{
+  padding: 0.3rem;
+  font-size: 1rem;
+ 
+}
+.primary{
+  background-color: #1890ff;
+  border: 1px solid #1890ff;
+  color: white;
+  cursor: pointer;
+}
+.cancel{
+  margin-right: 0.7rem;
+  background-color: white;
+  border: 1px solid #dedfe0;
+  cursor: pointer;
+}

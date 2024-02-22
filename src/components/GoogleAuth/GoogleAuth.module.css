@@ -1,0 +1,36 @@
+.authContainer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.authInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.authInfo p {
+  color: white;
+  font-style: 1.2rem;
+  font-weight: bold;
+}
+.authInfo button {
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px 0px rgba(13, 24, 105, 0.75);
+  transition: all 0.3s ease-in;
+}
+.authInfo button:hover {
+  transform: scale(1.1);
+  color: white;
+  background-color: #051b2e;
+}
+.googleIcon {
+  font-size: 1.5rem;
+}

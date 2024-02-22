@@ -1,0 +1,33 @@
+.weatherInfo {
+  padding-top: 14rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.dayOfWeek {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.weather {
+  display: flex;
+  align-items: center;
+}
+.weatherIcon {
+  width: 5rem;
+  height: 5rem;
+  background-repeat: no-repeat;
+}
+.temp {
+  margin-bottom: 1.5rem;
+  font-size: 5rem;
+}
+.temp span {
+  font-size: 1.5rem;
+  position: absolute;
+}
+.city {
+  font-size: 1.8rem;
+}

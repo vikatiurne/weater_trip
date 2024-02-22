@@ -1,0 +1,16 @@
+.img {
+  width: 10rem;
+}
+.tripInfo {
+  padding: 1rem;
+}
+.title {
+  margin-bottom: 1rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.tripPeriod {
+  font-size: 0.7rem;
+  color: gray;
+}

@@ -1,0 +1,23 @@
+.app {
+  padding: 2rem;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2px;
+}
+.tripsContainer {
+  margin-right: 2rem;
+}
+.tripsContainer h1 {
+  margin-bottom: 4rem;
+}
+
+.weatherContainer {
+  min-height: 100vh;
+  background-color: #082b4b;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
