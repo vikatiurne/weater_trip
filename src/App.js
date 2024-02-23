@@ -15,10 +15,12 @@ import Timer from './components/Timer/Timer';
 import styles from './App.module.css';
 
 function App() {
+  const [status, setStatus] = useState('idle');
   const [allTrips, setAllTrips] = useState([]);
   const [filteredAllTrips, setFilteredAllTrips] = useState([]);
   const [selectTrip, setSelectTrip] = useState({});
   const [activeCard, setActiveCard] = useState('');
+  const [isAddClick, setIsAddClick] = useState(false);
 
   useEffect(() => {
     createCollectionsInIndexDB();
@@ -51,18 +53,23 @@ function App() {
               isActive: false,
             },
           ];
+          setStatus('success');
           setAllTrips(trips);
           setSelectTrip(trips[0]);
           setActiveCard(trips[0].id);
         } else {
           const trips = e.target.result;
           trips.sort((a, b) => a.startDate - b.startDate);
+          setStatus('success');
           setAllTrips(trips);
           setSelectTrip(trips[0]);
           setActiveCard(trips[0].id);
         }
       };
-      trips.onerror = (err) => console.log(err);
+      trips.onerror = (err) => {
+        setStatus('error');
+        console.log(err);
+      };
 
       transaction.oncomplete = () => {
         db.close();
@@ -88,10 +95,14 @@ function App() {
           transaction.oncomplete = () => {
             db.close();
             getAllTrips();
+            setStatus('success');
           };
           console.log('Поїздка додана до бази даних');
         };
-        newTrip.onerror = (err) => console.log(err);
+        newTrip.onerror = (err) => {
+          setStatus('error');
+          console.log(err);
+        };
       };
     }
   };
@@ -108,15 +119,18 @@ function App() {
     setActiveCard(trip.id);
   };
 
-  return (
+  const clickButtonAddHandler = (bool)=>{setIsAddClick(bool)}
+
+  return status === 'success' ? (
     <div className={styles.app}>
       <div className={styles.tripsContainer}>
         <h1>Weather Forecast</h1>
-        <SearchTrip onchange={searchTripsHandler} />
+        <SearchTrip onchange={searchTripsHandler} isAddClick={isAddClick}/>
         <TripsList
           allTrips={filteredAllTrips}
           addClick={saveTripHandler}
           cardClick={cardClickHandler}
+          clickButtonAdd={clickButtonAddHandler}
           active={activeCard}
         />
 
@@ -128,6 +142,10 @@ function App() {
         <Timer timestamp={selectTrip?.startDate} />
       </aside>
     </div>
+  ) : status !== 'error' ? (
+    <h4>Loading...</h4>
+  ) : (
+    <h4>Unexpected error</h4>
   );
 }
 

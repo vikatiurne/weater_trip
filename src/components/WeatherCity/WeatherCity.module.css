@@ -31,3 +31,11 @@
 .city {
   font-size: 1.8rem;
 }
+.errMessage{
+  padding: 2rem;
+  color: gray;
+  font-size: 0.8rem;
+}
+.errMessage span{
+  color: red;
+}

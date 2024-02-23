@@ -29,3 +29,11 @@
   color: #0a3964;
   font-size: 0.7rem;
 }
+.errMessage{
+  padding: 2rem;
+  color: gray;
+  font-size: 0.8rem;
+}
+.errMessage span{
+  color: red;
+}

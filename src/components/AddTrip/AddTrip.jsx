@@ -10,7 +10,7 @@ import Modal from '../Modal/Modal';
 
 import styles from './AddTrip.module.css';
 
-const AddTrip = ({ onclick }) => {
+const AddTrip = ({ onclick,clickButtonAdd }) => {
   const [modalActive, setModalActive] = useState(false);
   const [cityName, setCityName] = useState('');
   const [startDate, setStartDate] = useState('');
@@ -34,6 +34,7 @@ const AddTrip = ({ onclick }) => {
   const changeCityHandler = (e) => setCityName(e.target.value);
 
   const addTripHandler = () => {
+    clickButtonAdd(true)
     setModalActive(true);
     setStartDate('');
     setEndDate('');
@@ -43,6 +44,7 @@ const AddTrip = ({ onclick }) => {
      onclick(cityName, startDate, endDate);
      reset()
      setModalActive(false)
+     clickButtonAdd(false)
   };
 
   const valid = {

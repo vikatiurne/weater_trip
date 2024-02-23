@@ -6,7 +6,7 @@ import AddTrip from '../AddTrip/AddTrip';
 
 import styles from './TripsList.module.css';
 
-const TripsList = ({ allTrips, addClick, cardClick, active }) => {
+const TripsList = ({ allTrips, addClick, cardClick, active,clickButtonAdd }) => {
   const clickCardHandler = (trip) => cardClick(trip);
 
   return (
@@ -24,7 +24,7 @@ const TripsList = ({ allTrips, addClick, cardClick, active }) => {
           </div>
         ))}
       </Carousel>
-      <AddTrip onclick={addClick} />
+      <AddTrip onclick={addClick} clickButtonAdd={clickButtonAdd}/>
     </div>
   );
 };
