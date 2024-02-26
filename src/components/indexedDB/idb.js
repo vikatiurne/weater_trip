@@ -11,8 +11,8 @@ const createCollectionsInIndexDB = () => {
   request.onerror = (err) => console.log(`Error: ${err}`);
   request.onupgradeneeded = () => {
     const db = request.result;
-    if (!db.objectStoreNames.contains('tripData')) {
-      db.createObjectStore('tripData', { keyPath: 'id' });
+    if (!db.objectStoreNames.contains('trip')) {
+      db.createObjectStore('trip', { keyPath: 'id' });
     }
   };
   request.onsuccess = () => console.log('База даних відкрита');
