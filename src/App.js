@@ -39,8 +39,8 @@ function App() {
 
     dbPromise.onsuccess = () => {
       const db = dbPromise.result;
-      const transaction = db.transaction('trip', 'readonly');
-      const tripData = transaction.objectStore('trip');
+      const transaction = db.transaction('tripData', 'readonly');
+      const tripData = transaction.objectStore('tripData');
       const trips = tripData.getAll();
       trips.onsuccess = (e) => {
         if (!e.target.result.length) {
